@@ -83,7 +83,6 @@ Penny U is on the move. If all goes well then I, your trusty robot sidekick, wil
         for user in settings.PENNY_ADMIN_USERS:
             self.slack.chat_postMessage(channel=user, text=message)
 
-
     @in_room('general')
     @is_event_type('message.channel_join')
     def welcome_user(self, event):
